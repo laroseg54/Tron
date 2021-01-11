@@ -1,0 +1,102 @@
+
+ 
+ * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html{
+	overflow: hidden;
+}
+
+#home .app{
+	width: 100%;
+	height: 100%;
+}
+
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+#imgTron{
+	width: 100%;
+	height: 100%;
+}
+
+.event {
+    border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+#deviceready.ready .event.listening { display: none; }
+#deviceready.ready .event.received { display: block; }
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+	-webkit-animation:fade 3000ms infinite;
+	width: 100%;
+	height: 100%;
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
+    }
+}
+/**/ 
+body {
+	/*background-color: lightblue; */
+	/*background : url("https://www.lokoloko.es/7112-thickbox_default/start-the-game.jpg");*/
+    background : url(../img/start.png);
+	position: relative;
+	margin: 0; 
+}
+
+#form {
+	color: white;
+	margin: auto;
+	/*width: 200px;*/
+	width: 20%; 
+	text-align: center;
+}
+
+.validate {
+	color: white;
+	background-color: aqua; 
+	font-size: 15px;
+	padding: 6px 16px;
+	border-radius: 40px;
+}
+
+
+
+#test {
+    border-radius: 50px; 
+	background-color: black; 
+	text-align: center;
+}

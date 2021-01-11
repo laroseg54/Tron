@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: http://<%=hostname%>:8080 https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <title>TRON</title>
+    <link rel="stylesheet" href="css/partie.css">
+</head>
+<body>
+    <div class="container">
+    <div id="terrain">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" id="grille">
+            <polygon id ="toucheGauche" points="0 0, 50 50, 0 100" fill-opacity="0" />
+            <polygon id ="toucheHaut" points="0 0, 50 50, 100 0" fill-opacity="0" />
+            <polygon id ="toucheDroite" points="100 0, 50 50, 100 100" fill-opacity="0" />
+            <polygon id ="toucheBas" points="0 100, 50 50, 100 100" fill-opacity="0" />
+            <text x="25" y="45" fill="#FFD700" font-size="25%" id="textInfo"></text>
+        </svg>  
+    </div>
+
+    <div id="scores">
+        <div id="partie">
+            <h2>Partie en cours</h2> <br>
+            <h6 id="j1" class="j1" style="font-size: 18px;"></h6>
+            <h6 id="j2" class="j2" style="font-size: 18px;"></h6>
+            <h6 id="j3" class="j3" style="font-size: 18px;"></h6>
+            <h6 id="j4" class="j4" style="font-size: 18px;"></h6>
+
+            <h6 id="gagnant" style="font-size: 18px;"></h6>
+
+           <!--BOUTON QUI AFFICHE HIGHSCORE, NB_WIN, NB_LOST -->
+           
+           <button id="buttonStats">Statistiques</button>
+        </br>
+            <input class="replay" type="button" value="Rejouer !">
+        </div>
+
+        <div id="stats">
+            <h2>Statistiques</h2> <br>
+
+            <h5 id="statsJ1" class="j1"></h5>
+            <table id="centre">
+                <tr>
+                    <td id="nb_winJ1" class="j1"></td>
+                </tr>
+                <tr>
+                    <td id="nb_lostJ1" class="j1"></td>
+                </tr>
+            </table>
+
+            <h5 id="statsJ2" class="j2"></h5>
+             <table id="centre">
+                <tr>
+                    <td id="nb_winJ2" class="j2"></td>
+                </tr>
+                <tr>
+                    <td id="nb_lostJ2" class="j2"></td>
+                </tr>
+            </table>
+
+            <h5 id="statsJ3" class="j3"></h5>
+             <table id="centre">
+                <tr>
+                    <td id="nb_winJ3" class="j3"></td>
+                </tr>
+                <tr>
+                    <td id="nb_lostJ3" class="j3"></td>
+                </tr>
+            </table>
+
+            <h5 id="statsJ4" class="j4"></h5>
+             <table id="centre">
+                <tr>
+                    <td id="nb_winJ4" class="j4"></td>
+                </tr>
+                <tr>
+                    <td id="nb_lostJ4" class="j4"></td>
+                </tr>
+            </table>
+
+            <button id="statsReturn">Retour à la partie</button>
+            <input class="replay" type="button" value="Rejouer !">
+        </div>
+        <br>
+        <div id="classement">
+            <ul id ="best3">
+            
+                <li>Classement <br> <strong>meilleurs joueurs : </strong> </li> <br>
+
+                <% for(var i=0; i<best3.length; i++) { %>
+                    <li>
+                        <%= best3[i].pseudo  %> 
+                        <%= best3[i].nb_win  %> <br><br>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+    </div>
+            
+    </div>
+<p id="platform" style="display:none"><%=platform%></p>
+<script src="js/moto.js"></script>
+<script src="js/partie.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+

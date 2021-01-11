@@ -1,0 +1,68 @@
+/**/ 
+body {
+	/*background-color: lightblue; */
+	/*background : url("https://www.lokoloko.es/7112-thickbox_default/start-the-game.jpg");*/
+    background : url(../img/start.png);
+	position: relative;
+	margin: 0; 
+}
+
+#form {
+	color: white;
+	margin: auto;
+	/*width: 200px;*/
+	width: 20%; 
+	text-align: center;
+}
+/*   BOUTON   */
+.validate {
+	color: white;
+	background-color: aqua; 
+	/*font-size: 15px;*/
+	font-size: 120%;
+	/*padding: 6px 16px;*/
+	padding: 4% 11%; ;
+	border-radius: 40px; /*px*/ 
+}
+/*   BOUTON   */
+#return {
+	color: white;
+	background-color: aqua; 
+	/*font-size: 15px;*/
+	font-size: 120%; /*150*/
+	/*padding: 6px 16px;*/
+	padding: 4% 11%; ;
+	border-radius: 40px; /*px*/ 
+}
+
+/*   BOUTON   */
+#inscription {
+	color: aqua;
+	background-color: white; 
+	font-size: 25px; 
+	/*font-size: 120%;*/
+	padding: 8px 18px; 
+	/*padding: 4% 11%;*/
+	border-radius: 40px; /*px*/
+} 
+
+#insc {
+	margin: auto;
+	/*width: 150px; */
+	width: 15%; 
+}
+
+#form_insc {
+	display:none;
+
+	color: white; 
+	margin: auto;
+	width: 40%; 
+	text-align: center;
+}
+
+#test {
+    border-radius: 50px;  /*px*/
+	background-color: black; 
+	text-align: center;
+}
