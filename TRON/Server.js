@@ -177,6 +177,6 @@ wss.on('connection', ws => {
 
 });
 
-server.listen(8080, function () {
+server.listen(process.env.PORT, function () {
   console.log('server success');
 });
