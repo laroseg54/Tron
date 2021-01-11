@@ -51,7 +51,7 @@ app.use(cors());
 app.get('/login',function(req,res){
     let adresse = server.address().address;
     if(adresse=="::"){
-      adresse="127.0.0.1";
+      adresse="tronprojet.herokuapp.com";
     }
     let port = process.env.PORT;
     let platform = req.query.platform?req.query.platform:"ordinateur";
@@ -75,7 +75,7 @@ app.get('/jeu',function(req,res){
     
     });
    
-    res.render('pages/partie.ejs', {port:req.PORT,hostname : req.hostname,platform:req.session.platform,best3});
+    res.render('pages/partie.ejs', {port:process.env.PORT,hostname : req.hostname,platform:req.session.platform,best3});
     
    })
     
