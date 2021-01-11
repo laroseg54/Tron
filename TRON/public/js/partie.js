@@ -69,7 +69,7 @@ statsReturn.onclick = function (event) {
 
 
 function touches() {
-    if (platform == "ordinateur") {
+    if (platform == "ordinateur"||platform == "browser") {
         window.onkeydown = (event) => {
             switch (event.key) {
                 case "ArrowLeft":
