@@ -7,7 +7,7 @@ let pseudoJoueur = urlParams.get('pseudo');
 let couleurJoueur = urlParams.get('couleur');
 let motoJoueur;
 let fin;
-let Socket = new WebSocket("ws://" + window.location.host);
+let Socket = new WebSocket("ws://" +tronprojet.herokuapp.com);
 let platform = document.getElementById("platform").innerText;
 
 
