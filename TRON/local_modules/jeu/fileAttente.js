@@ -1,6 +1,6 @@
-const Jeu = require("jeu.js");
-const Joueur = require("joueur.js");
-const JeuDb = require("jeuDB");
+const Jeu = require("./jeu.js");
+const Joueur = require("./joueur.js");
+const JeuDb = require("./jeuDB");
 
 class FileAttente {
 
