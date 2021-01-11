@@ -4,7 +4,7 @@
   "description": "test projet",
   "main": "TestWebSocket.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "start": "node Server.js"
   },
   "author": "",
   "license": "ISC",
