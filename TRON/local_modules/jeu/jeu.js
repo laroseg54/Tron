@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const JeuDb = require("./jeuDB");
+const JeuDb = require("jeuDB");
 class Jeu {
 
     constructor() {
