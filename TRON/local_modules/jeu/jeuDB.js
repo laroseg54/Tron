@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://127.0.0.1:27017/tron', {
+mongoose.connect('mongodb+srv://toto:toto@cluster0.4n6w4.mongodb.net/tron?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
