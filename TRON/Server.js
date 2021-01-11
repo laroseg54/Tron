@@ -53,6 +53,7 @@ app.get('/login',function(req,res){
     if(adresse=="::"){
       adresse="127.0.0.1";
     }
+    let port = process.env.PORT;
     let platform = req.query.platform?req.query.platform:"ordinateur";
     req.session.platform = platform;
     let motosCouleurs = [];
@@ -61,7 +62,7 @@ app.get('/login',function(req,res){
         motosCouleurs.push(moto.moto_color);
       })
     
-      res.render('pages/index.ejs',{adresse: adresse,motosCouleurs:motosCouleurs});
+      res.render('pages/index.ejs',{port:port,adresse: adresse,motosCouleurs:motosCouleurs});
     })
     
 });
@@ -74,7 +75,7 @@ app.get('/jeu',function(req,res){
     
     });
    
-    res.render('pages/partie.ejs', {hostname : req.hostname,platform:req.session.platform,best3});
+    res.render('pages/partie.ejs', {port:req.PORT,hostname : req.hostname,platform:req.session.platform,best3});
     
    })
     
