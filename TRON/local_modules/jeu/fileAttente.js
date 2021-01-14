@@ -9,7 +9,7 @@ class FileAttente {
         JeuDb.dropPlayers();
         this.jeu = new Jeu();
         this.jeux = [];
-        this.jeux.push(jeu);
+        this.jeux.push(this.jeu);
         
     }
 
@@ -27,7 +27,7 @@ class FileAttente {
             this.jeu.start();
             this.jeu = new Jeu();
             JeuDb.dropPlayers();
-            this.jeux.push(jeu);
+            this.jeux.push(this.jeu);
         } 
 
         ws.on('close', () => {
