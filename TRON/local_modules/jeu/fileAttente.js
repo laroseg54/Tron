@@ -8,6 +8,8 @@ class FileAttente {
     constructor() {
         JeuDb.dropPlayers();
         this.jeu = new Jeu();
+        this.jeux = [];
+        this.jeux.push(jeu);
         
     }
 
@@ -25,6 +27,7 @@ class FileAttente {
             this.jeu.start();
             this.jeu = new Jeu();
             JeuDb.dropPlayers();
+            this.jeux.push(jeu);
         } 
 
         ws.on('close', () => {
